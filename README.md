@@ -1,3 +1,11 @@
+#Registro Federal de Contribuyentes (RFC) Herramientas web.
+
+Herramientas para el manejo del **RFC** en el desarrollo web, estas actualmente consta 2.
+
+ - Un validador de **RFCs** en **PHP**
+ - Un plugin de **jQuery** para autogenerar claves **RFCs**
+
+
 ## Validación del Registro Federal de Contribuyentes (RFC).
 
 El **RFC** es una clave que tiene toda Persona física en México que realice alguna actividad licita que este obligada a pagar impuestos o toda Persona moral sin excepción (contribuyentes)`:¬S`.
@@ -83,4 +91,14 @@ if( validarRFC('VECJ880326 XXXX') ) {
 
 Puedes correr el siguiente Ejemplo de prueba:
 
- - [**./test.php**](https://github.com/fitorec/PHP_RFC_validacion/blob/master/test.php)
+ - [**./validacionRFC.php**](https://github.com/fitorec/PHP_RFC_validacion/blob/master/validacionRFC.php)
+
+
+## JQuery Plugin generador de RFC.
+
+Uso:
+
+	$('#mi_rfc_input').RFC();
+
+
+>**Nota**: Este plugin esta pendiente.
