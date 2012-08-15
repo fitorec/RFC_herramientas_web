@@ -80,3 +80,7 @@ if( validarRFC('VECJ880326 XXXX') ) {
 }
 
 ```
+
+Puedes correr el siguiente Ejemplo de prueba:
+
+ - [**./test.php**](https://github.com/fitorec/PHP_RFC_validacion/blob/master/test.php)
