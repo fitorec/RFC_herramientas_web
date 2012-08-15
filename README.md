@@ -12,6 +12,8 @@ Y se determina de la siguiente manera:
 
 Por ejemplo para el **VECJ880326 XXXX**
 
+## Sección Nombre
+
 Los 4 primeros dígitos son:
 
  - 1° La Primer letra del apellido paterno(**V**).
@@ -24,6 +26,11 @@ Los 4 primeros dígitos son:
 Por el momento una expresión de validación seria:
 
 	^[a-z]{4}
+
+## Sección Fecha de nacimiento
+
+La siguiente parte le corresponde a la fecha de nacimiento la cual esta dividido en:
+
 
  - El 5° y 6° dígito corresponden al año de nacimiento(**88**).
 
@@ -39,6 +46,8 @@ Por el momento una expresión de validación seria:
 		([0-3][0-9])
 
 
+## Sección _homoclave_
+
 Los últimos 4 dígitos(**XXXX**) es la _homoclave_, la cual se puede validar como:
 
 	[a-z0-9]{4}	
@@ -47,11 +56,7 @@ Finalmente la expresión de validación para una RFC con _homoclave_ seria:
 
 	^[A-Z]{4}([0-9]{2})(1[0-2]|0[1-9])([0-3][0-9])([ -]?)([A-Z0-9]{4})$
 
-## Un poco de PHP.
-
-
-
-## Codificando en PHP.
+# Un poco de PHP.
 
 ```php
 <?php
