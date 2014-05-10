@@ -2,12 +2,13 @@
 /**
  * Valida un RFC
  *
- * @param string $rfc a validar
- * @return múltiple int 1 si el $rfc es valido 0 si no. boolean FALSE si sucede un error.
+ * @param  string $rfc a validar
+ * @return int múltiple 1 si el $rfc es valido 0 si no.
+ *         boolean FALSE si sucede un error.
  * @link http://php.net/manual/en/function.preg-match.php
  */
 function validarRFC($rfc) {
-	$regex = '/^[A-Z]{4}([0-9]{2})(1[0-2]|0[1-9])([0-3][0-9])([ -]?)([A-Z0-9]{4})$/';
+	$regex = '/^[A-Z]{3,4}([0-9]{2})(1[0-2]|0[1-9])([0-3][0-9])([ -]?)([A-Z0-9]{4})$/';
 	return preg_match($regex, $rfc);
 }//fin función
 
@@ -18,16 +19,16 @@ $RFClistaTest = array(
 		'mensaje' => 'RFC valido'
 	),
 	'VECJ881326 XXXX' => array(
-			'valor_esperado' => 0,
-			'mensaje' => 'Invalido ya que no hay mes 13'
+        'valor_esperado' => 0,
+        'mensaje' => 'Invalido ya que no hay mes 13'
 	),
 	'MAMM881026-9PMX' => array(
-			'valor_esperado' => 1,
-			'mensaje' => 'RFC valido'
+        'valor_esperado' => 1,
+        'mensaje' => 'RFC valido'
 	),
 	'MAMM991041-SPUS' => array(
-			'valor_esperado' => 0,
-			'mensaje' => 'Invalido ya que no hay día 41'
+        'valor_esperado' => 0,
+        'mensaje' => 'Invalido ya que no hay día 41'
 	),
 );
 
